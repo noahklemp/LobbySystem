@@ -1,0 +1,4 @@
+name: Lobby System
+version: '${project.version}'
+main: com.github.noahkalboussi.lobbysystem.LobbySystem
+api-version: 1.18
