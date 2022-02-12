@@ -1,4 +1,15 @@
-name: Lobby System
+name: LobbySystem
 version: '${project.version}'
 main: com.github.noahkalboussi.lobbysystem.LobbySystem
 api-version: 1.18
+commands:
+  build:
+    description:
+    usage: /<command>
+    aliases: edit
+  config:
+    description:
+    usage: /<command>
+
+
+

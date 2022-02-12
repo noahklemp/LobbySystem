@@ -5,11 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.github.noahkalboussi</groupId>
-    <artifactId>lobby-system</artifactId>
+    <artifactId>LobbySystem</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
 
-    <name>Lobby System</name>
+    <name>LobbySystem</name>
 
     <properties>
         <java.version>1.8</java.version>
@@ -66,7 +66,7 @@
     <dependencies>
         <dependency>
             <groupId>org.spigotmc</groupId>
-            <artifactId>spigot-api</artifactId>
+            <artifactId>spigot</artifactId>
             <version>1.18.1-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
