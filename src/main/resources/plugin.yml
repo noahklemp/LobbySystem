@@ -3,13 +3,34 @@ version: '${project.version}'
 main: com.github.noahkalboussi.lobbysystem.LobbySystem
 api-version: 1.18
 commands:
-  build:
+  spawn:
     description:
     usage: /<command>
-    aliases: edit
-  config:
+    aliases: lobby, hub
+  setSpawn:
     description:
     usage: /<command>
+  setHeight:
+    description:
+    usage: /<command>
+
+permissons:
+  lobby.*:
+    description: Acces all.
+    children:
+      lobby.spawn: true
+      lobby.setspawn: true
+      lobby.setheight: true
+  lobby.spawn:
+    description: /Spawn
+    default: true
+  lobby.setspawn:
+    description: /setSpawn
+    default: op
+  lobby.setheight:
+    description: /setHeight
+    default: op
+
 
 
 

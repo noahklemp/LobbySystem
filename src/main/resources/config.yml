@@ -1,8 +1,30 @@
-# default config.yml
+# LobbySystem Config.yml
 
-Locations:
-  Spawn:
-    X:
-    Y:
-    Z:
+# Server
+ServerName: 'SERVER.NET'
+Prefix: '§7[§6Lobby§7] '
+ActionBarMessage: '§6§l+SERVER.NET §3§lUPDATE: §r§ewww.server.net/update'
+ActionBar: true
+Scoreboard: true
 
+AdventureMode: true
+DoubleJump: true
+
+RespawnHeight: 35
+
+# Locations
+
+Spawn:
+  X: 293
+  Y: 54
+  Z: 274
+
+Lottery:
+  X:
+  Y:
+  z:
+
+DailyReward:
+  X:
+  Y:
+  z:

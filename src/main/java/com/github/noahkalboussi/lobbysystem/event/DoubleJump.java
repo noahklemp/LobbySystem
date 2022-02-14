@@ -1,9 +1,8 @@
-package com.github.noahkalboussi.lobbysystem;
+package com.github.noahkalboussi.lobbysystem.event;
 
+import com.github.noahkalboussi.lobbysystem.LobbySystem;
 import org.bukkit.GameMode;
-import org.bukkit.Location;
-import org.bukkit.Material;
-import org.bukkit.block.BlockFace;
+import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -11,11 +10,11 @@ import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.event.player.PlayerToggleFlightEvent;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class DoubleJump implements Listener {
+    FileConfiguration config = LobbySystem.plugin.getConfig();
 
     private List<Player> doubleJump;
 
@@ -38,9 +37,7 @@ public class DoubleJump implements Listener {
         Player player = event.getPlayer();
         GameMode gameMode = player.getGameMode();
 
-        if(gameMode == GameMode.CREATIVE || gameMode == GameMode.SPECTATOR || player.isFlying()) {
-            return;
-        }
+        if(gameMode == GameMode.CREATIVE || gameMode == GameMode.SPECTATOR || player.isFlying() || config.getBoolean("DoubleJump") == false) return;
 
         event.setCancelled(true);
         doubleJump.add(player);
